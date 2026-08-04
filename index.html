@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/webp" href="alasca-logo.webp">
+    <title>Alasca Burguer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="config.js"></script>
+    <script src="ruas.js"></script>
+    <script src="script.js"></script>
+
+
+    <main class="container">
+        <div class="card">
+            <h1>Escolha uma loja</h1>
+
+            <div class="input-group">
+                <label>Ou digite sua rua ou CEP para checar a loja mais próxima:</label>
+                <div class="input-wrapper">
+                    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e6707a"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="address-input" placeholder="Qual sua rua ou CEP?" list="addresses-suggestions"
+                        autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                    <div id="custom-results" class="autocomplete-results"></div>
+                </div>
+
+            </div>
+
+            <button id="btn-verify" class="btn-solid">Verificar loja mais próxima.</button>
+
+            <section class="store-section">
+                <h2>Todas as lojas disponíveis:</h2>
+
+                <div class="store-list">
+                    <div class="store-item" id="jardim-laura-filial">
+                        <div class="store-logo">
+                            <img src="alasca-logo.webp" alt="Logo">
+                        </div>
+                        <div class="store-info">
+                            <h3 class="store-title"></h3>
+                            <p class="store-status"></p>
+                        </div>
+                    </div>
+
+                    <div class="store-item" id="bairro-dos-casa-filiasl">
+                        <div class="store-logo">
+                            <img src="alasca-logo.webp" alt="Logo">
+                        </div>
+                        <div class="store-info">
+                            <h3 class="store-title"></h3>
+                            <p class="store-status"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="popup-overlay" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-icon">⚠️</div>
+            <h3>Atenção</h3>
+            <p></p>
+            <button id="close-popup">Entendido</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
