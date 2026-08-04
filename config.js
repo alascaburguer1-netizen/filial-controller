@@ -13,7 +13,7 @@ const CONFIG_ALASCA = {
         }
     },
     "bairro-dos-casa-filiasl": {
-        "nome": "Alasca Burguer - Bairro dos Casa",
+        "nome": "Alasca Burguer - Assunção",
         "link": "https://youtube.com",
         "horarios": {
             "0": { "abre": "18:00", "fecha": "23:00" },
