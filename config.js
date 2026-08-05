@@ -15,7 +15,7 @@
             "0": { "abre": "18:00", "fecha": "23:00" }, // Domingo
             "1": { "abre": "18:00", "fecha": "23:00" }, // Segunda
             "2": null,                                  // Terça
-            "3": { "abre": "15:55", "fecha": "23:00" }, // Quarta                                   
+            "3": { "abre": "18:00", "fecha": "23:00" }, // Quarta                                   
             "4": { "abre": "18:00", "fecha": "23:00" },  // Quinta
             "5": { "abre": "18:00", "fecha": "23:00" },  // Sexta
             "6": { "abre": "18:00", "fecha": "23:00" } // Sábado

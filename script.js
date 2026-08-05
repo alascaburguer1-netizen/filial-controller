@@ -1,4 +1,4 @@
-/* let diferencaServidor = 0;
+let diferencaServidor = 0;
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-async function iniciarRelogio() {
+a/* sync function iniciarRelogio() {
 
     try {
 
