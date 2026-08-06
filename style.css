@@ -1,4 +1,3 @@
-/* Resets e Configurações Básicas */
 * {
     margin: 0;
     padding: 0;
@@ -91,18 +90,18 @@ body {
     margin: 25px 50px;
 }
 
-.separator::before,
-.separator::after {
+.separator::before, .separator::after {
     content: '';
     flex: 1;
     border-bottom: 1px solid #e2e8f0;
 }
 
 .icon-mountain {
-    color: #fca5a5; /* Vermelho mais claro para o ícone da montanha */
+    width: 60px;
+    height: auto;
     margin: 0 15px;
-    font-size: 18px;
     opacity: 0.6;
+    fill: #fca5a5;
 }
 
 /* Lista de Cartões de Lojas */
@@ -113,10 +112,10 @@ body {
     gap: 20px;
 }
 
-/* Estilo Individual dos Cartões de Lojas */
+/* Estrutura Atualizada do Cartão */
 .location-card {
     display: flex;
-    align-items: center;
+    flex-direction: column; /* Organiza os blocos verticalmente agora */
     border: 1px solid #f1f5f9;
     border-radius: 12px;
     padding: 16px;
@@ -129,6 +128,13 @@ body {
 .location-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* Topo do cartão: Logo lado a lado com Informações */
+.card-top-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
 
 .store-logo {
@@ -164,11 +170,73 @@ body {
 .neighborhoods {
     color: #718096;
     font-size: 13px;
-    margin: 0 0 12px 0;
+    margin: 0;
     line-height: 1.4;
 }
 
-/* Badges de Status (Aberto/Fechado) */
+/* Separador dentro do cartão */
+.separator-card {
+    width: 100%;
+    height: 1px;
+    background-color: #f1f5f9; 
+    margin: 16px 0 12px 0; /* Margem ajustada para dar respiro em cima e embaixo */
+}
+
+/* =========================================
+   NOVAS DIVS DE HORÁRIOS
+   ========================================= */
+.unidade-info-extra {
+    display: flex;
+    flex-wrap: nowrap; /* Garante que fique lado a lado forçadamente */
+    gap: 10px;
+    width: 100%; /* Agora ocupa o card inteiro */
+}
+
+.info-box {
+    background-color: #f1f2f4; 
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    white-space: nowrap; /* Impede que o texto quebre linhas dentro da div */
+}
+
+.info-text {
+    color: #4a4a4a;
+    font-size: 13.5px;
+}
+
+.info-text strong {
+    font-weight: 600;
+    color: #333333;
+}
+
+strong.text-red {
+    color: #e63946;
+}
+
+.divider {
+    color: #b0b0b0;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.info-box i {
+    font-size: 15px;
+    margin-right: 8px;
+}
+
+.icon-red {
+    color: #e63946;
+}
+
+.icon-dark {
+    color: #555555;
+}
+
+/* Badges de Status (Aberto/Fechado) - Mantidos do seu código original */
 .status {
     display: inline-flex;
     align-items: center;
@@ -219,17 +287,51 @@ body {
     font-weight: 500;
 }
 
-.separator-card {
-    width: 100%;
-    height: 1px;
-    background-color: #f1f5f9; /* Cinza bem claro, sutil */
-    margin-bottom: 12px; /* O parágrafo de cima já tem margin-bottom de 12px, isso equilibra o espaço abaixo da linha */
+/* =========================================
+   NOVAS DIVS DE HORÁRIOS
+   ========================================= */
+.unidade-info-extra {
+    display: flex;
+    flex-wrap: wrap; /* Alterado para 'wrap' para permitir a quebra de linha */
+    gap: 10px;
+    width: 100%; 
 }
 
-.icon-mountain {
-    width: 60px; /* Como a imagem é larga, aumentamos a largura */
-    height: auto; /* Deixa a altura se ajustar automaticamente */
-    margin: 0 15px;
-    opacity: 0.6;
-    fill: #fca5a5; /* Aplica a cor exata da paleta! */
+.info-box {
+    background-color: #f1f2f4; 
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 220px; /* Força a quebra para 2 linhas quando o espaço for menor que 220px para cada caixa */
+    white-space: nowrap; /* Mantém o texto inteiro dentro da sua própria caixinha */
+}
+
+/* =========================================
+   RESPONSIVIDADE PARA TELAS PEQUENAS
+   ========================================= */
+@media (max-width: 380px) {
+    /* Reduz o espaçamento interno das caixas */
+    .info-box {
+        padding: 8px 10px;
+    }
+
+    /* Diminui o tamanho da fonte do texto */
+    .info-text {
+        font-size: 11.5px; 
+    }
+
+    /* Diminui o divisor e o espaço ao redor dele */
+    .divider {
+        font-size: 12px;
+        margin: 0 6px;
+    }
+
+    /* Reduz levemente o tamanho do ícone */
+    .info-box i {
+        font-size: 13px;
+        margin-right: 6px;
+    }
 }

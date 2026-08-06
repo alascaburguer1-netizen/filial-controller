@@ -4,30 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alasca Burguer - Escolha uma loja</title>
-    <!-- Importando ícones do Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="config.js"></script> 
+    <script src="config.js"></script>
     <script src="script.js"></script>
     <div class="main-container">
-        <!-- Cartão Principal -->
         <div class="card-container">
-            <!-- Cabeçalho curvo vermelho -->
             <div class="header-curve"></div>
-            <!-- Logo Principal -->
             <div class="main-logo-wrapper">
                 <img src="LOGO_ALASCA_PERFIL.webp" alt="Alasca Burguer Logo" class="main-logo">
             </div>
-            <!-- Título e Subtítulo -->
             <div class="text-center">
                 <h1 class="main-title">Escolha uma loja</h1>
                 <p class="subtitle">
                     <i class="fa-solid fa-burger text-red"></i> Selecione a unidade mais próxima de você <br>e faça seu pedido!
                 </p>
             </div>
-            <!-- Separador com ícone -->
             <div class="separator">
                 <svg class="icon-mountain" viewBox="0 0 357 117" preserveAspectRatio="xMidYMid meet"
                     xmlns="http://www.w3.org/2000/svg">
@@ -36,48 +30,64 @@
                     </g>
                 </svg>
             </div>
-            <!-- Lista de Lojas -->
             <div class="locations-list">
-                <!-- Loja 1 (ID ATUALIZADO PARA BATER COM O CONFIG) -->
+                
+                <!-- CARTÃO ALVARENGA -->
                 <div class="location-card" id="jardim-laura-filial">
-                    <img src="LOGO_ALASCA_PERFIL.webp" alt="Logo Jardim Laura" class="store-logo">
-                    <div class="store-info">
-                        <h2 class="store-title">Alasca Burguer - Alvarenga</h2>
-                        <p class="service-area">
-                            <i class="fa-solid fa-location-dot"></i> Atendemos os bairros:
-                        </p>
-                        <p class="neighborhoods">Jardim Laura, João de Barro, Sítio Joanina, União, Serra Azul, Parque das Garças, Industrial, Ideal, Químicos, Bandeirantes, Orquídeas, Las Palmas, Pinheirinho, Jardim Represa, Oliveira, Esmeralda, Batistini, Chácara Royal Park, Sítio Bom Jesus, Jardim Thelma, Cooperativa e Jardim Ipanema.</p>
-                        <div class="separator-card"></div>
-                        
-                        <!-- BADGES OCULTAS POR PADRÃO -->
-                        <span class="status badge-closed">
-                            <span class="dot dot-closed"></span> Fechado
-                        </span>
-                        <span class="status badge-open" style="display: none;">
-                            <span class="dot dot-open"></span> Aberto agora
-                        </span>
+                    <!-- Nova Div agrupando o topo -->
+                    <div class="card-top-section">
+                        <img src="LOGO_ALASCA_PERFIL.webp" alt="Logo Jardim Laura" class="store-logo">
+                        <div class="store-info">
+                            <h2 class="store-title">Alasca Burguer - Alvarenga</h2>
+                            <p class="service-area">
+                                <i class="fa-solid fa-location-dot"></i> Atendemos os bairros:
+                            </p>
+                            <p class="neighborhoods">Jardim Laura, João de Barro, Sítio Joanina, União, Serra Azul, Parque das Garças, Industrial, Ideal, Químicos, Bandeirantes, Orquídeas, Las Palmas, Pinheirinho, Jardim Represa, Oliveira, Esmeralda, Batistini, Chácara Royal Park, Sítio Bom Jesus, Jardim Thelma, Cooperativa e Jardim Ipanema.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="separator-card"></div>
+                    
+                    <div class="unidade-info-extra">
+                        <div class="info-box">
+                            <i class="fa-regular fa-clock icon-red"></i>
+                            <span class="info-text">Atendimento: <strong>18h00 - 00h45</strong></span>
+                        </div>
+                        <div class="info-box">
+                            <i class="fa-regular fa-calendar-days icon-dark"></i>
+                            <span class="info-text">Fechado às: <strong>Quartas-feiras</strong></span>
+                        </div>
                     </div>
                 </div>
-                <!-- Loja 2 (ID ATUALIZADO PARA BATER COM O CONFIG) -->
+
+                <!-- CARTÃO ASSUNÇÃO -->
                 <div class="location-card" id="bairro-dos-casa-filiasl">
-                    <img src="LOGO_ALASCA_PERFIL.webp" alt="Logo Assunção" class="store-logo">
-                    <div class="store-info">
-                        <h2 class="store-title">Alasca Burguer - Assunção</h2>
-                        <p class="service-area">
-                            <i class="fa-solid fa-location-dot"></i> Atendemos os bairros:
-                        </p>
-                        <p class="neighborhoods">Bairro dos Casa, Assunção, Alves Dias, Demarchi, Calux, Planalto, Batistini, Jardim Ipanema, Ferrazópolis, Botujuru, Terra Nova I e II, Parque dos Pássaros, Independência, Vila das Valsas, Swiss Park, Parque Espacial, Carminha, Vila Euclides e região.</p>
-                        <div class="separator-card"></div>
-                        
-                        <!-- BADGES OCULTAS POR PADRÃO -->
-                        <span class="status badge-closed" style="display: none;">
-                            <span class="dot dot-closed"></span> Fechado
-                        </span>
-                        <span class="status badge-open">
-                            <span class="dot dot-open"></span> Aberto agora
-                        </span>
+                    <!-- Nova Div agrupando o topo -->
+                    <div class="card-top-section">
+                        <img src="LOGO_ALASCA_PERFIL.webp" alt="Logo Assunção" class="store-logo">
+                        <div class="store-info">
+                            <h2 class="store-title">Alasca Burguer - Assunção</h2>
+                            <p class="service-area">
+                                <i class="fa-solid fa-location-dot"></i> Atendemos os bairros:
+                            </p>
+                            <p class="neighborhoods">Bairro dos Casa, Assunção, Alves Dias, Demarchi, Calux, Planalto, Batistini, Jardim Ipanema, Ferrazópolis, Botujuru, Terra Nova I e II, Parque dos Pássaros, Independência, Vila das Valsas, Swiss Park, Parque Espacial, Carminha, Vila Euclides e região.</p>
+                        </div>
+                    </div>
+
+                    <div class="separator-card"></div>
+                    
+                    <div class="unidade-info-extra">
+                        <div class="info-box">
+                            <i class="fa-regular fa-clock icon-red"></i>
+                            <span class="info-text">Atendimento: <strong>18h00 - 00h45</strong></span>
+                        </div>
+                        <div class="info-box">
+                            <i class="fa-regular fa-calendar-days icon-dark"></i>
+                            <span class="info-text">Fechado às: <strong>Terças-feiras</strong></span>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
         <!-- Rodapé -->
